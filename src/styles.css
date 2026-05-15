@@ -1,3 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-bg: oklch(98% 0.008 80);
+  --color-bg-deep: oklch(96% 0.01 80);
+  --color-surface: #ffffff;
+  --color-surface-muted: oklch(98.5% 0.006 80);
+  --color-border: oklch(92% 0.008 80);
+  --color-border-strong: oklch(86% 0.01 80);
+  --color-ink: oklch(22% 0.02 60);
+  --color-muted: oklch(50% 0.015 60);
+  --color-faint: oklch(68% 0.012 60);
+  --color-accent: oklch(58% 0.15 270);
+  --color-accent-soft: oklch(94% 0.04 270);
+  --color-accent-ink: oklch(35% 0.13 270);
+  --color-done: oklch(62% 0.13 150);
+  --color-done-soft: oklch(94% 0.04 150);
+
+  --radius-pill: 999px;
+  --shadow-ring: 0 0 0 3px var(--color-accent-soft);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-ink antialiased font-sans;
+}
+
+button {
+  cursor: default;
+}
+
+app-root {
+  display: block;
+}

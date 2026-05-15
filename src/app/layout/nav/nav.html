@@ -1,0 +1,24 @@
+<nav aria-label="Main" class="border-b border-border bg-bg">
+  <div class="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
+    <a routerLink="/" class="flex items-center gap-2.5">
+      <div
+        class="w-[26px] h-[26px] rounded-lg bg-accent text-white grid place-items-center font-bold text-[13px]"
+        aria-hidden="true"
+      >
+        U
+      </div>
+      <span class="font-bold text-[15px] tracking-tight">User</span>
+    </a>
+    <div class="flex items-center gap-1.5">
+      @for (item of navItems; track $index) {
+        <a
+          #link="routerLinkActive"
+          routerLink="{{ item.route }}"
+          routerLinkActive
+          [class]="link.isActive ? btnStyleActive : btnStyleInactive"
+          >{{ item.label }}</a
+        >
+      }
+    </div>
+  </div>
+</nav>
