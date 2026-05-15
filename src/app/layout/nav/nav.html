@@ -13,7 +13,7 @@
       @for (item of navItems; track $index) {
         <a
           #link="routerLinkActive"
-          routerLink="{{ item.route }}"
+          [routerLink]="item.route"
           routerLinkActive
           [class]="link.isActive ? btnStyleActive : btnStyleInactive"
           >{{ item.label }}</a

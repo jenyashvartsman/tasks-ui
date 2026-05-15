@@ -14,8 +14,8 @@ export class Nav {
   readonly btnStyleInactive = `${this.btnStyleBase} text-muted hover:bg-bg-deep hover:text-ink`;
   readonly btnStyleActive = `${this.btnStyleBase} bg-surface text-ink border border-border hover:bg-surface-muted hover:border-border-strong`;
 
-  readonly navItems: { label: string; route: string }[] = [
-    { label: 'Home', route: '/' },
+  readonly navItems: { label: string; route: string; exact?: boolean }[] = [
+    { label: 'Home', route: '/home' },
     { label: 'Tasks', route: '/tasks' },
   ];
 }
